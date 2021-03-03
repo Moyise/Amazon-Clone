@@ -1,0 +1,230 @@
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 580px;
+$breakpoint-small: 280px;
+
+.ordersScreen {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  position: relative;
+  .ordersBackground {
+    max-width: 1250px;
+    margin: auto;
+    min-height: 100vh;
+    font-family: Poppins;
+    .ordersTitle {
+      padding: 60px 10px 0;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    .ordersEmpty {
+      max-width: 200px;
+      display: flex;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      padding: 10px;
+      .emptyOrder {
+        color: rgba(255, 168, 0, 0.9);
+        padding-left: 10px;
+      }
+    }
+    .ordersCenter {
+      padding: 50px 10px;
+      .ordersLeft {
+        .cardItem {
+          max-width: 800px;
+          min-height: 160px;
+          background: rgba(0, 0, 0, 0.8);
+          backdrop-filter: blur(20px);
+          border-radius: 20px;
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          margin: 10px 0;
+          .itemImage {
+            position: relative;
+            width: 200px;
+            height: 160px;
+            border-radius: 20px;
+            object-fit: contain;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            .numbItems {
+              position: absolute;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: bold;
+              color: rgb(255, 136, 0);
+              padding-top: 60px;
+            }
+          }
+          .itemDetails {
+            font-style: normal;
+            font-weight: bold;
+            padding: 0 8px;
+            color: rgba(255, 255, 255, 0.9);
+            width: 100%;
+            .itemTitle {
+              padding: 14px 0 20px;
+              font-size: 24px;
+              color: rgba(255, 255, 255, 0.9);
+            }
+            .itemStock {
+              font-size: 12px;
+              color: rgba(255, 115, 115, 0.8);
+              padding-bottom: 10px;
+            }
+            .itemStock.done {
+              color: rgba(110, 255, 116, 0.5);
+            }
+            .itemLinks {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              font-size: 12px;
+              p {
+                color: rgba(255, 255, 255, 0.8);
+                padding: 0 10px;
+              }
+              .itemLink {
+                color: rgba(255, 255, 255, 0.8);
+              }
+            }
+          }
+          .itemPrice {
+            font-size: 24px;
+            padding: 0 10px 0 0;
+            font-style: normal;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.9);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .ordersScreen {
+    .ordersBackground {
+      .ordersCenter {
+        .ordersLeft {
+          .cardItem {
+            height: 180px;
+            .itemImage {
+              width: 180px;
+              height: 180px;
+            }
+            .itemDetails {
+              .itemTitle {
+                font-size: 18px;
+              }
+              .itemLinks {
+                p {
+                  font-size: 8px;
+                }
+              }
+            }
+            .itemPrice {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $breakpoint-mobile) {
+  .ordersScreen {
+    .ordersBackground {
+      .ordersTitle {
+        font-size: 24px;
+      }
+      .ordersCenter {
+        .ordersLeft {
+          .cardItem {
+            height: 160px;
+            .itemImage {
+              width: 160px;
+              height: 160px;
+            }
+            .itemDetails {
+              padding: 0 0 0 8px;
+              .itemTitle {
+                font-size: 10px;
+              }
+              .itemStock {
+                font-size: 8px;
+                padding-bottom: 10px;
+              }
+              .itemLinks {
+                p {
+                  font-size: 8px;
+                }
+                .itemLink {
+                  font-size: 8px;
+                }
+              }
+            }
+            .itemPrice {
+              font-size: 10px;
+              padding: 14px 10px 14px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $breakpoint-small) {
+  .ordersScreen {
+    .ordersBackground {
+      .ordersTitle {
+        font-size: 18px;
+      }
+      .ordersCenter {
+        .ordersLeft {
+          .cardItem {
+            height: 120px;
+            .itemImage {
+              width: 120px;
+              height: 120px;
+            }
+            .itemDetails {
+              padding: 0 0 0 4px;
+              .itemTitle {
+                font-size: 8px;
+              }
+              .itemStock {
+                font-size: 4px;
+                padding-bottom: 10px;
+              }
+              .itemLinks {
+                p {
+                  font-size: 4px;
+                }
+                .itemLink {
+                  font-size: 4px;
+                }
+              }
+            }
+            .itemPrice {
+              font-size: 6px;
+              padding: 14px 10px 14px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

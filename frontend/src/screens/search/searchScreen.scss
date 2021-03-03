@@ -1,0 +1,29 @@
+.searchScreen {
+  background: rgba(0, 0, 0, 0.9);
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+  .product {
+    max-width: 1250px;
+    margin: auto;
+    padding: 60px 0;
+
+    .productRow {
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      .empty {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.9);
+        background: rgba(0, 0, 0, 0.9);
+        padding: 10px;
+        border-radius: 10px;
+      }
+    }
+  }
+}

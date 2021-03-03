@@ -1,0 +1,363 @@
+$breakpoint-mobile: 580px;
+$breakpoint-small: 280px;
+
+.orderScreen {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  .orderBackground {
+    max-width: 1250px;
+    margin: auto;
+    min-height: 100vh;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    .orderTitle {
+      font-size: 36px;
+      color: rgba(255, 255, 255, 0.9);
+      padding: 40px 10px 0;
+    }
+    .orderContainer {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      padding: 40px 10px;
+      .orderLeft {
+        max-width: 800px;
+        width: 100%;
+        .orderCardTop {
+          width: 100%;
+          min-height: 200px;
+          background: rgba(0, 0, 0, 0.8);
+          backdrop-filter: blur(20px);
+          border-radius: 20px;
+          display: flex;
+          align-items: flex-start;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          .topLeft,
+          .topRight {
+            padding: 20px;
+            .title {
+              font-size: 18px;
+              color: rgba(255, 255, 255, 0.9);
+            }
+            .detail {
+              font-size: 12px;
+              color: rgba(255, 255, 255, 0.8);
+              padding-top: 10px;
+              width: 165px;
+            }
+          }
+          .topMiddle {
+            padding: 20px;
+            .title {
+              font-size: 18px;
+              color: rgba(255, 255, 255, 0.9);
+            }
+            .status {
+              font-size: 14px;
+              color: rgba(255, 115, 115, 0.8);
+              padding-top: 10px;
+            }
+            .status.done {
+              color: rgb(0, 133, 40);
+            }
+          }
+        }
+        .orderCardBottom {
+          width: 100%;
+          //min-height: 600px;
+          background: rgba(0, 0, 0, 0.8);
+          backdrop-filter: blur(20px);
+          border-radius: 20px;
+          margin: 10px 0 20px;
+          padding: 20px;
+          .bottomTitle {
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.9);
+          }
+          .orderDetail {
+            display: flex;
+            align-items: flex-start;
+            justify-content: left;
+            padding-top: 20px;
+            .itemImage {
+              width: 120px;
+              height: 120px;
+              border-radius: 20px;
+              object-fit: contain;
+            }
+            .itemDetails {
+              font-style: normal;
+              font-weight: bold;
+              color: rgba(255, 255, 255, 0.9);
+              padding-left: 20px;
+              width: 100%;
+              .itemTitle {
+                font-size: 18px;
+              }
+              .itemPrice {
+                font-size: 14px;
+                padding: 10px 0 20px;
+              }
+              .select {
+                width: 92px;
+                height: 29px;
+                background: rgba(255, 255, 255, 0.6);
+                border-radius: 20px;
+                outline: none;
+                border: none;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                color: rgba(255, 255, 255, 0.9);
+                padding: 0 10px;
+                .option {
+                  color: rgba(0, 0, 0, 0.8);
+                  font-style: normal;
+                  font-weight: bold;
+                  font-size: 14px;
+                  outline: none;
+                  border: none;
+                }
+              }
+              .paidDetails {
+                display: flex;
+                align-items: center;
+
+                .paidLink {
+                  font-size: 12px;
+                  color: rgb(255, 166, 0);
+                  padding: 0 20px;
+                }
+              }
+            }
+          }
+          .line {
+            max-width: 500px;
+            height: 0px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+            margin: auto;
+            padding: 10px 0;
+          }
+        }
+      }
+      .orderRight {
+        max-width: 400px;
+        width: 100%;
+        .orderRightTop {
+          width: 100%;
+          min-height: 350px;
+          background: rgba(0, 0, 0, 0.8);
+          backdrop-filter: blur(20px);
+          border-radius: 20px;
+          padding: 20px;
+          text-align: center;
+          .orderTitle {
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.9);
+            padding-bottom: 10px;
+          }
+          .orderDetails {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            padding-top: 10px;
+          }
+          .orderTotal {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            padding-top: 20px;
+            padding-bottom: 20px;
+          }
+          .line {
+            width: 100px;
+            height: 0px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+            margin: auto 0 auto auto;
+          }
+          .orderButton {
+            max-width: 250px;
+            margin: auto;
+          }
+          .orderButton2 {
+            max-width: 250px;
+            width: 100%;
+            height: 35px;
+            background: rgba(0, 112, 186, 0.9);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            outline: none;
+            border: none;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.9);
+            cursor: pointer;
+          }
+        }
+        .orderRightBottom {
+          text-align: center;
+          background: rgba(0, 0, 0, 0.8);
+          backdrop-filter: blur(20px);
+          border-radius: 20px;
+          padding: 20px;
+          margin-top: 10px;
+          p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+          }
+          .link {
+            color: rgb(255, 166, 0);
+            border: 1px solid rgb(255, 166, 0);
+            border-radius: 10px;
+            padding: 0 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .orderScreen {
+    .orderBackground {
+      .orderTitle {
+        font-size: 24px;
+      }
+      .orderContainer {
+        .orderLeft {
+          .orderCardTop {
+            .topLeft,
+            .topRight {
+              .title {
+                font-size: 18px;
+              }
+            }
+            .topMiddle {
+              .title {
+                font-size: 18px;
+              }
+              .status {
+                font-size: 14px;
+              }
+            }
+          }
+          .orderCardBottom {
+            .bottomTitle {
+              font-size: 18px;
+            }
+            .orderDetail {
+              .itemDetails {
+                .itemTitle {
+                  font-size: 14px;
+                }
+                .itemPrice {
+                  font-size: 12px;
+                }
+                .paidDetails {
+                  .paidLink {
+                    padding: 0 8px;
+                    font-size: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .orderRight {
+          .orderRightTop {
+            .orderTitle {
+              font-size: 18px;
+            }
+            .orderDetails {
+              font-size: 14px;
+            }
+            .orderTotal {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-small) {
+  .orderScreen {
+    .orderBackground {
+      .orderTitle {
+        font-size: 18px;
+      }
+      .orderContainer {
+        .orderLeft {
+          .orderCardTop {
+            .topLeft,
+            .topRight {
+              .title {
+                font-size: 14px;
+              }
+            }
+            .topMiddle {
+              .title {
+                font-size: 14px;
+              }
+              .status {
+                font-size: 12px;
+              }
+            }
+          }
+          .orderCardBottom {
+            .bottomTitle {
+              font-size: 12px;
+            }
+            .orderDetail {
+              .itemDetails {
+                .itemTitle {
+                  font-size: 8px;
+                }
+                .itemPrice {
+                  font-size: 10px;
+                }
+                .paidDetails {
+                  .paidLink {
+                    padding: 0 4px;
+                    font-size: 6px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .orderRight {
+          .orderRightTop {
+            .orderTitle {
+              font-size: 14px;
+            }
+            .orderDetails {
+              font-size: 12px;
+            }
+            .orderTotal {
+              font-size: 12px;
+            }
+            .orderButton2 {
+              font-size: 14px;
+            }
+          }
+          .orderRightBottom {
+            p {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

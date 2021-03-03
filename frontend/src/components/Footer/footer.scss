@@ -1,0 +1,113 @@
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 580px;
+$breakpoint-small: 280px;
+
+.footer {
+  background: rgba(0, 0, 0, 1);
+  overflow: hidden;
+  .footerBackground {
+    max-width: 1250px;
+    min-height: 512px;
+    margin: auto;
+    margin-bottom: 0;
+    font-family: Poppins;
+    font-style: normal;
+    padding-bottom: 20px;
+
+    .footerTop {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      padding: 80px 10px 40px;
+      .footerTitle {
+        font-weight: 800;
+        font-size: 24px;
+        color: rgba(255, 255, 255, 0.9);
+      }
+      .footerLink {
+        font-weight: 800;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+        padding: 16px 0;
+      }
+    }
+    .footerBottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 400px;
+      margin: auto;
+
+      p {
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 21px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .footer {
+    .footerBackground {
+      .footerTop {
+        .footerTitle {
+          font-size: 12px;
+        }
+        .footerLink {
+          font-size: 8px;
+          padding-right: 4px;
+        }
+      }
+      .footerBottom {
+        justify-content: left;
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .footer {
+    .footerBackground {
+      .footerTop {
+        .footerTitle {
+          font-size: 12px;
+        }
+        .footerLink {
+          font-size: 8px;
+        }
+      }
+      .footerBottom {
+        justify-content: left;
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-small) {
+  .footer {
+    .footerBackground {
+      .footerTop {
+        .footerTitle {
+          font-size: 12px;
+        }
+        .footerLink {
+          font-size: 8px;
+        }
+      }
+      .footerBottom {
+        justify-content: left;
+        p {
+          font-size: 8px;
+        }
+      }
+    }
+  }
+}

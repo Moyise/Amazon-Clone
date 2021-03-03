@@ -1,0 +1,561 @@
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 518px;
+$breakpoint-small: 280px;
+
+.productScreen {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  .productBackground {
+    max-width: 1250px;
+    margin: auto;
+    min-height: 100vh;
+    .productContainer {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 40px 10px 0;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      .productImages {
+        display: flex;
+        flex-direction: column;
+        max-width: 80px;
+        .imageCard {
+          margin-bottom: 10px;
+          width: 80px;
+          height: 100px;
+          border-radius: 10px;
+          object-fit: contain;
+          cursor: pointer;
+        }
+      }
+      .productImage {
+        position: relative;
+        margin: 0 10px;
+        border-radius: 20px;
+        max-width: 400px;
+        overflow: hidden;
+        .rect {
+          display: none;
+          position: absolute;
+          width: 150px;
+          height: 100px;
+          background: rgba(71, 71, 71, 0.2);
+          border-radius: 20px;
+          z-index: 10;
+        }
+        .rect.show {
+          display: block;
+        }
+        .imgPrev {
+          width: 400px;
+          height: 400px;
+          object-fit: contain;
+        }
+      }
+      .zoomContainer {
+        position: absolute;
+        background: rgba(0, 0, 0, 1);
+        border-radius: 20px;
+        background-repeat: no-repeat;
+        background-size: auto;
+        top: 40px;
+        left: 520px;
+        width: 400px;
+        height: 400px;
+        object-fit: contain;
+        display: none;
+        z-index: 10;
+      }
+      .zoomContainer.show {
+        display: none;
+      }
+      .productDetails {
+        max-width: 420px;
+        //height: 642px;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 20px;
+        .pdTitle {
+          font-size: 18px;
+          color: rgba(255, 255, 255, 0.9);
+          padding: 20px;
+        }
+        .pBrand {
+          font-size: 10px;
+          color: rgba(255, 255, 255, 0.8);
+          padding: 10px 20px;
+        }
+        .pStar {
+          color: rgba(255, 255, 255, 0.8);
+          padding: 10px 20px;
+        }
+        .pDescription {
+          font-size: 12px;
+          color: rgba(255, 255, 255, 0.8);
+          padding: 10px 20px;
+        }
+      }
+      .productAddToCart {
+        max-width: 300px;
+        height: 300px;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 20px;
+        margin-left: 10px;
+        width: 100%;
+        .pPrice {
+          font-size: 24px;
+          color: rgba(255, 255, 255, 0.9);
+          padding: 10px 20px;
+        }
+        .pStock {
+          font-size: 18px;
+          color: rgba(110, 255, 116, 0.5);
+          padding: 10px 20px;
+        }
+        .pStock.out {
+          color: rgba(255, 168, 0, 0.6);
+        }
+        .pQty {
+          font-size: 18px;
+          color: rgba(255, 255, 255, 0.9);
+          padding: 10px;
+          margin-left: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: left;
+          width: 92px;
+          height: 29px;
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 20px;
+          .select {
+            width: 40px;
+            height: 20px;
+            background: transparent;
+            outline: none;
+            border: none;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            padding-left: 4px;
+            .option {
+              color: rgba(255, 255, 255, 0.8);
+              font-style: normal;
+              font-weight: bold;
+              font-size: 14px;
+              outline: none;
+              border: none;
+              background: rgba(0, 0, 0, 0.8);
+            }
+          }
+        }
+        .pButtonContainer {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: auto;
+          width: 200px;
+          height: 40px;
+          background: rgba(255, 168, 0, 0.9);
+          border-radius: 15px;
+          margin-top: 80px;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          .pButton {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            font-style: normal;
+            font-weight: bold;
+          }
+        }
+        .pButtonContainer.out {
+          cursor: default;
+          background: rgba(255, 168, 0, 0.9);
+          opacity: 0.5;
+        }
+      }
+    }
+    .productReview {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 80px 10px;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      .reviewLeft {
+        margin-bottom: 10px;
+        .reviewCard {
+          max-width: 400px;
+          height: 200px;
+          background: rgba(0, 0, 0, 0.8);
+          border-radius: 20px;
+          .CreateReviewTitle {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+          }
+          p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 0 20px;
+          }
+          .writeReview {
+            width: 260px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 20px;
+            margin: 60px auto auto;
+            text-align: center;
+            padding-top: 4px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.9);
+            cursor: pointer;
+          }
+        }
+        .writeReviewCard {
+          max-width: 400px;
+          min-height: 450px;
+          background: rgba(0, 0, 0, 0.8);
+          border-radius: 20px;
+          margin-top: 20px;
+          display: none;
+          .reviewForm {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            .reviewFormGroup {
+              display: flex;
+              flex-direction: column;
+              padding-bottom: 20px;
+              .formLabel {
+                font-size: 18px;
+                color: rgba(255, 255, 255, 0.8);
+                padding-bottom: 10px;
+              }
+              .formInput {
+                max-width: 340px;
+                height: 40px;
+                background: rgba(255, 255, 255, 0.6);
+                border-radius: 10px;
+                color: rgba(0, 0, 0, 0.8);
+                font-size: 18px;
+                font-style: normal;
+                font-weight: bold;
+                border: none;
+                outline: none;
+                padding: 0 10px;
+              }
+              .select {
+                width: 140px;
+                height: 20px;
+                background: rgba(255, 255, 255, 0.6);
+                border-radius: 10px;
+                outline: none;
+                border: none;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.9);
+                padding: 0 10px;
+                .option {
+                  color: rgba(255, 255, 255, 0.8);
+                  font-style: normal;
+                  font-weight: bold;
+                  font-size: 14px;
+                  outline: none;
+                  border: none;
+                  background: rgba(0, 0, 0, 0.8);
+                }
+              }
+              .formTextarea {
+                max-width: 340px;
+                height: 140px;
+                background: rgba(255, 255, 255, 0.6);
+                border-radius: 10px;
+                resize: none;
+                outline: none;
+                border: none;
+                color: rgba(0, 0, 0, 0.8);
+                font-size: 18px;
+                font-style: normal;
+                font-weight: bold;
+                padding: 10px;
+              }
+            }
+            .formSubmit {
+              margin-top: 10px;
+              width: 120px;
+              height: 40px;
+              background: rgba(255, 255, 255, 0.6);
+              border-radius: 20px;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 18px;
+              color: rgba(255, 255, 255, 0.9);
+              border: none;
+              outline: none;
+              cursor: pointer;
+            }
+          }
+          .revMessage {
+            color: rgba(42, 150, 0, 0.9);
+            padding: 10px 20px;
+          }
+          .errMessage {
+            color: rgba(150, 122, 0, 0.9);
+            padding: 10px 20px;
+          }
+        }
+        .writeReviewCard.open {
+          display: block;
+        }
+      }
+      .reviewRight {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        max-width: 640px;
+        width: 100%;
+        .noReview {
+          color: rgba(255, 255, 255, 0.9);
+          background: rgba(0, 0, 0, 0.8);
+          border-radius: 10px;
+          padding: 10px 20px;
+        }
+        .reviewsCard {
+          max-width: 640px;
+          width: 100%;
+          min-height: 200px;
+          background: rgba(0, 0, 0, 0.8);
+          border-radius: 20px;
+          padding: 10px 20px;
+          margin-bottom: 10px;
+
+          .reviewsTop {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            .profileImg {
+              width: 40px;
+              height: 40px;
+              background: rgba(255, 255, 255, 0.2);
+              border-radius: 30px;
+              object-fit: contain;
+            }
+            .profileName {
+              font-size: 18px;
+              color: rgba(255, 255, 255, 0.9);
+              padding-left: 10px;
+            }
+          }
+          .reviewsBottom {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            padding: 10px 0;
+            .reviewRating {
+              color: rgba(255, 255, 255, 0.8);
+            }
+            .reviewTitle {
+              font-size: 14px;
+              color: rgba(255, 255, 255, 0.8);
+              padding-left: 10px;
+            }
+          }
+          .reviewDate {
+            font-size: 8px;
+            color: rgba(255, 255, 255, 0.8);
+          }
+          .reviewDescription {
+            padding-top: 10px;
+            font-size: 10px;
+            line-height: 20px;
+            color: rgba(255, 255, 255, 0.8);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .productScreen {
+    .productBackground {
+      .productContainer {
+        .productImage {
+          max-width: 380px;
+          .imgPrev {
+            width: 380px;
+            height: 380px;
+          }
+        }
+        .productDetails {
+          max-width: 380px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .productScreen {
+    .productBackground {
+      .productContainer {
+        .productImages {
+          flex-direction: row;
+          margin-right: 50px;
+          .imageCard {
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+          }
+        }
+        .productImage {
+          max-width: 340px;
+          .imgPrev {
+            width: 340px;
+            height: 340px;
+          }
+        }
+        .productDetails {
+          max-width: 380px;
+          margin-bottom: 10px;
+        }
+      }
+      .productReview {
+        .reviewLeft {
+          .writeReviewCard {
+            .reviewForm {
+              .reviewFormGroup {
+                .select {
+                  .option {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-small) {
+  .productScreen {
+    .productBackground {
+      .productContainer {
+        .productImages {
+          flex-direction: row;
+          margin-right: 50px;
+          .imageCard {
+            width: 50px;
+            height: 50px;
+            margin-right: 4px;
+          }
+        }
+        .productImage {
+          max-width: 240px;
+          .imgPrev {
+            width: 240px;
+            height: 240px;
+          }
+        }
+        .productDetails {
+          .pdTitle {
+            font-size: 14px;
+            padding: 10px;
+          }
+          .pBrand {
+            font-size: 8px;
+          }
+          .pDescription {
+            font-size: 8px;
+            line-height: 18px;
+          }
+        }
+        .productAddToCart {
+          .pPrice {
+            font-size: 18px;
+          }
+          .pStock {
+            font-size: 14px;
+          }
+          .pQty {
+            width: 82px;
+            height: 29px;
+            font-size: 14px;
+            .select {
+              font-size: 14px;
+              .option {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+      .productReview {
+        .reviewLeft {
+          .reviewCard {
+            .CreateReviewTitle {
+              font-size: 14px;
+            }
+            p {
+              font-size: 10px;
+            }
+            .writeReview {
+              width: 200px;
+            }
+          }
+          .writeReviewCard {
+            max-width: 260px;
+            .reviewForm {
+              .reviewFormGroup {
+                .formLabel {
+                  font-size: 14px;
+                }
+                .formInput {
+                  max-width: 220px;
+                }
+                .select {
+                  .option {
+                    font-size: 10px;
+                  }
+                }
+              }
+              .formSubmit {
+                font-size: 14px;
+                width: 100px;
+                height: 30px;
+              }
+            }
+          }
+        }
+        .reviewRight {
+          .reviewsCard {
+            .reviewsTop {
+              .profileName {
+                font-size: 14px;
+              }
+            }
+            .reviewsBottom {
+              .reviewTitle {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

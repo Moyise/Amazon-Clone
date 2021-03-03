@@ -1,0 +1,244 @@
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 580px;
+$breakpoint-small: 280px;
+
+.home {
+  background: url(../../img/livingroompng1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  object-fit: contain;
+  width: 100%;
+  overflow: hidden;
+
+  .backgroundRec {
+    width: 100%;
+    min-height: 1024px;
+    background: rgba(0, 0, 0, 0.9);
+    .homeContainer {
+      position: relative;
+      max-width: 1250px;
+      width: 100%;
+      margin: auto;
+      padding-top: 60px;
+      .menuContainer {
+        padding-left: 10px;
+        z-index: 10;
+        .menuIcon {
+          position: fixed;
+          cursor: pointer;
+          z-index: 10;
+          padding: 6px 20px;
+        }
+        .menuIcon.open {
+          transform: rotate(90deg);
+        }
+        .homeMenu {
+          position: fixed;
+          width: 300px;
+          height: 600px;
+          background: rgba(255, 255, 255, 0.2);
+          backdrop-filter: blur(10px);
+          border-radius: 20px;
+          z-index: 9;
+          display: none;
+          ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: left;
+            padding-top: 40px;
+            .menuTitle {
+              font-size: 18px;
+              padding: 20px 0;
+            }
+            .menuItem {
+              font-size: 14px;
+              color: rgba(255, 255, 255, 0.8);
+              padding: 20px 10px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin: auto;
+              width: 70%;
+
+              .menuLink {
+                cursor: pointer;
+              }
+
+              .headerSub {
+                position: absolute;
+                width: 300px;
+                height: 600px;
+                top: 0;
+                left: 0;
+                background: rgb(33, 37, 41);
+                border-radius: 20px;
+                display: none;
+
+                ul {
+                  .subTitle {
+                    font-size: 18px;
+                    padding: 20px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: auto;
+                    cursor: pointer;
+                  }
+                  .subItem {
+                    font-size: 14px;
+                    color: rgba(255, 255, 255, 0.8);
+                    padding: 20px 10px;
+                    p {
+                      color: rgba(255, 255, 255, 0.8);
+                      cursor: pointer;
+                    }
+                  }
+                }
+              }
+              .headerSub.open {
+                display: block;
+              }
+            }
+          }
+        }
+        .homeMenu.open {
+          display: block;
+        }
+      }
+
+      .homeCenter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: Oswald;
+        font-style: normal;
+        padding-top: 80px;
+        .title {
+          font-weight: bold;
+          font-size: 144px;
+          text-transform: uppercase;
+          color: rgba(255, 255, 255, 0.9);
+        }
+        .subTitle {
+          font-weight: 200;
+          font-size: 48px;
+          color: rgba(255, 255, 255, 0.8);
+        }
+        .scrollLogo {
+          padding-top: 80px;
+          cursor: pointer;
+        }
+        .scrollDown {
+          font-weight: 900;
+          font-size: 18px;
+          color: rgba(255, 255, 255, 0.9);
+          padding-top: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .home {
+    .backgroundRec {
+      .homeContainer {
+        .homeCenter {
+          .title {
+            font-size: 96px;
+          }
+          .subTitle {
+            font-size: 36px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .home {
+    .backgroundRec {
+      .homeContainer {
+        .homeCenter {
+          .title {
+            font-size: 72px;
+          }
+          .subTitle {
+            font-size: 24px;
+          }
+          .scrollLogo {
+            svg {
+              width: 60px;
+              height: 60px;
+            }
+          }
+          .scrollDown {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-small) {
+  .home {
+    .backgroundRec {
+      .homeContainer {
+        .menuContainer {
+          .homeMenu {
+            width: 200px;
+            height: 400px;
+            ul {
+              .menuTitle {
+                font-size: 14px;
+              }
+              .menuItem {
+                font-size: 10px;
+                .headerSub {
+                  width: 200px;
+                  height: 400px;
+                  ul {
+                    .subTitle {
+                      font-size: 14px;
+                    }
+                    .subItem {
+                      font-size: 10px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .homeCenter {
+          .title {
+            font-size: 64px;
+          }
+          .subTitle {
+            font-size: 18px;
+          }
+          .scrollLogo {
+            svg {
+              width: 40px;
+              height: 40px;
+            }
+          }
+          .scrollDown {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}

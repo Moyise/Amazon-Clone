@@ -1,0 +1,32 @@
+$breakpoint-mobile: 420px;
+$breakpoint-small: 280px;
+
+.backToTop {
+  position: fixed;
+  z-index: 999;
+  right: 40px;
+  bottom: -40px;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.backToTop.show {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+  bottom: 20px;
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .backToTop {
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-small) {
+  .backToTop {
+    right: 6px;
+  }
+}

@@ -1,0 +1,77 @@
+$breakpoint-mobile: 580px;
+$breakpoint-small: 280px;
+
+.notFoundScreen {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  .notFoundBackground {
+    max-width: 1250px;
+    margin: auto;
+    min-height: 100vh;
+    .notFountContainer {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      font-family: Oswald;
+      font-style: normal;
+
+      .Title {
+        font-weight: bold;
+        font-size: 288px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .subTitle {
+        font-weight: 200;
+        font-size: 64px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .buttonWrap {
+        display: flex;
+        align-items: center;
+        padding-top: 20px;
+        .buttonDesc {
+          font-weight: bold;
+          font-size: 24px;
+          color: rgba(255, 255, 255, 0.8);
+          padding-right: 60px;
+        }
+        .button {
+          background: rgba(0, 0, 0, 0.8);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          box-sizing: border-box;
+          border-radius: 20px;
+          font-weight: bold;
+          font-size: 24px;
+          color: rgba(255, 208, 0, 0.9);
+          padding: 0 16px;
+          outline: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .notFoundScreen {
+    .notFoundBackground {
+      .notFountContainer {
+        .Title {
+          font-size: 144px;
+        }
+        .subTitle {
+          font-size: 36px;
+        }
+        .buttonWrap {
+          .buttonDesc {
+            font-size: 18px;
+          }
+          .button {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

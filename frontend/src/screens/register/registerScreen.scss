@@ -1,0 +1,245 @@
+$breakpoint-mobile: 420px;
+$breakpoint-small: 280px;
+
+.registerScreen {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  .registerBackground {
+    max-width: 1250px;
+    margin: auto;
+    min-height: 100vh;
+    .registerContainer {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      padding: 40px 10px;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      .registerLeft {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 10px;
+        .registerLogo {
+          padding-bottom: 20px;
+        }
+        .registerCard {
+          width: 400px;
+          min-height: 600px;
+          background: rgba(0, 0, 0, 0.8);
+          border-radius: 20px;
+          padding: 20px 30px;
+          .registerTitle {
+            font-size: 36px;
+            color: rgba(255, 255, 255, 0.9);
+          }
+          .registerForm {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 40px;
+            .registerFormGroup {
+              display: flex;
+              flex-direction: column;
+              padding-bottom: 20px;
+              max-width: 340px;
+              width: 100%;
+              .formLabel {
+                font-size: 18px;
+                color: rgba(255, 255, 255, 0.8);
+                padding-bottom: 10px;
+              }
+              .formInputWrap {
+                max-width: 340px;
+                width: 100%;
+                height: 40px;
+                background: rgba(255, 255, 255, 0.6);
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                .formInput {
+                  width: 100%;
+                  height: 40px;
+                  color: rgba(0, 0, 0, 0.8);
+                  background: transparent;
+                  border-radius: 10px;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: bold;
+                  border: none;
+                  outline: none;
+                  padding: 0 10px;
+                }
+                .imageWrap {
+                  padding-right: 10px;
+                  padding-top: 4px;
+                  cursor: pointer;
+                }
+              }
+            }
+            .errorMessage {
+              font-size: 14px;
+              color: rgba(255, 0, 0, 0.9);
+            }
+            .formSubmit {
+              margin: auto;
+              margin-top: 40px;
+              max-width: 300px;
+              height: 40px;
+              background: rgba(255, 168, 0, 0.9);
+              border-radius: 20px;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 18px;
+              color: rgba(255, 255, 255, 0.9);
+              border: none;
+              outline: none;
+              padding: 0 10px;
+              cursor: pointer;
+            }
+          }
+        }
+        .registerDetail {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          padding: 30px 0;
+          .line1,
+          .line2 {
+            width: 100px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+          }
+          .description {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+          }
+        }
+
+        .detailsButton {
+          max-width: 300px;
+          width: 100%;
+          height: 40px;
+          background: rgba(255, 255, 255, 0.5);
+          border-radius: 20px;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.9);
+          text-align: center;
+          padding-top: 10px;
+        }
+      }
+      .registerRight {
+        font-style: normal;
+        font-weight: bold;
+        padding-top: 70px;
+        .registerOption {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          max-width: 300px;
+          width: 100%;
+          height: 40px;
+          border-radius: 10px;
+          margin-bottom: 20px;
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .registerScreen {
+    .registerBackground {
+      .registerContainer {
+        .registerLeft {
+          .registerCard {
+            padding: 20px;
+            width: 300px;
+            .registerTitle {
+              font-size: 24px;
+            }
+            .registerForm {
+              .registerFormGroup {
+                .formLabel {
+                  font-size: 14px;
+                }
+                .formInputWrap {
+                  max-width: 260px;
+                  width: 100%;
+                  .formInput {
+                    width: 100%;
+                  }
+                }
+              }
+              .formSubmit {
+                font-size: 14px;
+              }
+            }
+          }
+          .registerDetail {
+            .line1,
+            .line2 {
+              width: 60px;
+            }
+            .description {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-small) {
+  .registerScreen {
+    .registerBackground {
+      .registerContainer {
+        .registerLeft {
+          .registerCard {
+            width: 260px;
+            .registerTitle {
+              font-size: 24px;
+            }
+            .registerForm {
+              .registerFormGroup {
+                .formLabel {
+                  font-size: 14px;
+                }
+                .formInput {
+                  width: 100%;
+                }
+              }
+              .formSubmit {
+                width: 210px;
+                font-size: 12px;
+              }
+            }
+          }
+          .registerDetail {
+            .line1,
+            .line2 {
+              width: 60px;
+            }
+            .description {
+              font-size: 8px;
+            }
+          }
+          .detailsButton {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

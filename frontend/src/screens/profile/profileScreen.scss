@@ -1,0 +1,268 @@
+$breakpoint-mobile: 580px;
+$breakpoint-small: 280px;
+
+.profileScreen {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  .profileBackground {
+    max-width: 1250px;
+    margin: auto;
+    min-height: 100vh;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    .profileContainer {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      padding: 20px 10px;
+      .profileLeft {
+        max-width: 400px;
+        width: 100%;
+        margin-bottom: 10px;
+        .leftTitle {
+          font-size: 36px;
+          color: rgba(255, 255, 255, 0.9);
+          padding-bottom: 40px;
+        }
+        .leftCard {
+          max-width: 400px;
+          width: 100%;
+          min-height: 450px;
+          background: rgba(0, 0, 0, 0.8);
+          backdrop-filter: blur(20px);
+          border-radius: 20px;
+          padding: 20px;
+          .cardTop {
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 50px;
+            img {
+              width: 50px;
+              height: 50px;
+              background: rgba(255, 255, 255, 0.2);
+              border-radius: 30px;
+              object-fit: contain;
+            }
+            .name {
+              font-size: 24px;
+              color: rgba(255, 255, 255, 0.9);
+              padding-left: 20px;
+            }
+          }
+          .cardDetails {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            p {
+              padding-bottom: 20px;
+            }
+          }
+        }
+      }
+      .profileRight {
+        max-width: 400px;
+        width: 100%;
+        .rightTitle {
+          font-size: 36px;
+          color: rgba(255, 255, 255, 0.9);
+          padding-bottom: 40px;
+        }
+        .rightCard {
+          max-width: 400px;
+          width: 100%;
+          min-height: 600px;
+          background: rgba(0, 0, 0, 0.8);
+          backdrop-filter: blur(20px);
+          border-radius: 20px;
+          padding: 20px;
+          .registerForm {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 40px;
+            .registerFormGroup {
+              display: flex;
+              flex-direction: column;
+              padding-bottom: 20px;
+              .formLabel {
+                font-size: 18px;
+                color: rgba(255, 255, 255, 0.8);
+                padding-bottom: 10px;
+              }
+              .formInputWrap {
+                width: 340px;
+                height: 40px;
+                background: rgba(255, 255, 255, 0.6);
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                .formInput {
+                  width: 100%;
+                  height: 40px;
+                  color: rgba(0, 0, 0, 0.8);
+                  background: transparent;
+                  border-radius: 10px;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: bold;
+                  border: none;
+                  outline: none;
+                  padding: 0 10px;
+                }
+                .fileInput {
+                  width: 100%;
+                  outline: none;
+                  border: none;
+                  font-style: normal;
+                  font-weight: bold;
+                  &::-webkit-file-upload-button {
+                    background: transparent;
+                    padding: 10px;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 14px;
+                    outline: none;
+                    border: none;
+                  }
+                }
+                .fas {
+                  color: rgba(255, 168, 0, 0.9);
+                }
+
+                .imageWrap {
+                  padding-right: 10px;
+                  padding-top: 4px;
+                  cursor: pointer;
+                }
+              }
+            }
+            .errorMessage {
+              font-size: 14px;
+              color: rgba(255, 0, 0, 0.9);
+            }
+            .successMessage {
+              font-size: 14px;
+              color: rgba(26, 155, 0, 0.9);
+            }
+            .formSubmit {
+              margin: auto;
+              margin-top: 40px;
+              width: 200px;
+              height: 40px;
+              background: rgba(255, 168, 0, 0.9);
+              border-radius: 20px;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 18px;
+              color: rgba(255, 255, 255, 0.9);
+              border: none;
+              outline: none;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .profileScreen {
+    .profileBackground {
+      .profileContainer {
+        .profileLeft {
+          .leftTitle {
+            font-size: 24px;
+          }
+          .leftCard {
+            .cardTop {
+              .name {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+        .profileRight {
+          .rightTitle {
+            font-size: 24px;
+          }
+          .rightCard {
+            .registerForm {
+              .registerFormGroup {
+                .formLabel {
+                  font-size: 14px;
+                }
+                .formInputWrap {
+                  width: 300px;
+                  .formInput {
+                    width: 100%;
+                  }
+                }
+              }
+              .formSubmit {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-small) {
+  .profileScreen {
+    .profileBackground {
+      .profileContainer {
+        .profileLeft {
+          .leftTitle {
+            font-size: 18px;
+          }
+          .leftCard {
+            .cardTop {
+              .name {
+                font-size: 14px;
+              }
+            }
+            .cardDetails {
+              font-size: 12px;
+            }
+          }
+        }
+        .profileRight {
+          .rightTitle {
+            font-size: 18px;
+          }
+          .rightCard {
+            .registerForm {
+              .registerFormGroup {
+                .formLabel {
+                  font-size: 12px;
+                }
+                .formInputWrap {
+                  width: 220px;
+                  .formInput {
+                    width: 100%;
+                    font-size: 12px;
+                  }
+                  .fileInput {
+                    font-size: 12px;
+                    &::-webkit-file-upload-button {
+                      font-size: 12px;
+                    }
+                  }
+                }
+              }
+              .formSubmit {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
