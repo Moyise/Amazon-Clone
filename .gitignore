@@ -10,9 +10,11 @@ node_modules/
 
 # production
 /fontend/build
+/backend/dist
 /build
 build/
 build
+/dist
 
 # misc
 .DS_Store

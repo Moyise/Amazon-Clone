@@ -7,8 +7,8 @@ interface IUser extends Document {
   password: string;
   isAdmin: boolean;
   image: string;
-  googleId: string;
-  facebookId: string;
+  googleId?: string;
+  facebookId?: string;
   matchPassword?: any;
   token?: any;
   createdAt?: any;

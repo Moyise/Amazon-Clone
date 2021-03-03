@@ -8,7 +8,6 @@ import Product from "../models/productModel";
 export const getProducts = async (req: Request, res: Response) => {
   try {
     let keyword: any;
-    console.log(req.query);
 
     if (req.query.keyword === "accessories") {
       keyword = req.query.keyword
