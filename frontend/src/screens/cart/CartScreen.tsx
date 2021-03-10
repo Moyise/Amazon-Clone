@@ -62,7 +62,9 @@ function CartScreen() {
                   <div key={item.product} className="cardItem">
                     <img src={item.image} alt={item.name} className="itemImage" />
                     <div className="itemDetails">
-                      <h1 className="itemTitle">{item.name}</h1>
+                      <Link to={`/products/${item.product}`} className="itemTitle">
+                        {item.name}
+                      </Link>
                       <p className="itemStock">
                         {item.countInStock >= 5
                           ? "In Stock"

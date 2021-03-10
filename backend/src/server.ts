@@ -1,4 +1,5 @@
 import express from "express";
+import path from "path";
 import dotenv from "dotenv";
 import morgan from "morgan";
 import connectDB from "./config/db";
@@ -35,11 +36,11 @@ app.get("/api/config/paypal", (req, res) => res.send(process.env.PAYPAL_CLIENT_I
 app.use("/api/stripe", paymentRoutes);
 
 if (process.env.NODE_ENV === "production") {
-  //   const root = path.join("frontend", "build");
-  //   app.use(express.static(root));
-  //   app.get("*", (req, res) => res.sendFile("index.html", { root }));
+  const root = path.join("build");
+  //  console.log(root);
+  app.use(express.static(root));
 
-  app.get("/", (req, res) => res.send("API is running..."));
+  app.get("*", (req, res) => res.sendFile("index.html", { root }));
 } else {
   app.get("/", (req, res) => res.send("API is running..."));
 }

@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { reducerState } from "../../store";
 import { IUserLogin } from "../../types";
 import { logout } from "../../actions/userActions";
+import { useSwipeable } from "react-swipeable";
 
 function Header() {
   const history = useHistory();
@@ -55,6 +56,10 @@ function Header() {
     }
   };
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => setOpen(false),
+  });
+
   return (
     <>
       <div className="header">
@@ -75,7 +80,7 @@ function Header() {
                 />
               </svg>
             </div>
-            <div className={open ? "menuLinks open" : "menuLinks"}>
+            <div {...handlers} className={open ? "menuLinks open" : "menuLinks"}>
               <div className="menuHeader">
                 {userInfo && <img src={userInfo?.image} alt="pic" className="picture" />}
                 <h1 className="menuTitle">
